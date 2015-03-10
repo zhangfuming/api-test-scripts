@@ -1,0 +1,144 @@
+# coding=utf-8
+__author__ = 'zhangfuming'
+
+apis = {
+    'desc':'网上开户server api',
+    'list':[
+         {
+            'desc':'TT 获取开户信息',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/1/tt/000000/openaccount/query/info/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/1/tt/000000/openaccount/query/info/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"customerNo":"160999900000001"}
+        },
+         {
+            'desc':'TT 开户',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/1/tt/000000/openaccount/firmoffer/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/1/tt/000000/openaccount/firmoffer/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"customerName":"测试","phone":"18601696010","papersType":"2","papersNum":"110229199902021450","gender":"0","province":"上海","city":"市辖区","area":"浦东新区","tradePWD":"123456","phonePWD":"123456","idType":"1","bankAcc":"22222222222222","checkBankCard":"001"}
+        },
+         {
+            'desc':'TT 验证银行卡',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/1/tt/000000/openaccount/check/bankcard/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/1/tt/000000/openaccount/check/bankcard/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"customerNo":"160999900000001","papersType":"2","papersNum":"110229199902021450","checkBankCard":"001","bankAcc":"222222222222222"}
+        },
+        {
+            'desc':'TT 推广-实名认证',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/1/popularize/tt/000000/openaccount/firmoffer/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/1/popularize/tt/000000/openaccount/firmoffer/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"customerName":"测试","phone":"18601696010","papersNum":"110229199902021450","province":"上海","city":"市辖区","area":"浦东新区"}
+        },
+        {
+            'desc':'TT 推广-补充银行信息',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/1/popularize/tt/000000/add/bankcard/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/1/popularize/tt/000000/add/bankcard/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"customerNo":"160999900000001","papersNum":"110229199902021450","checkBankCard":"001","bankAcc":"222222222222222"}
+        },
+        {
+            'desc':'TT 推广-提交来源信息',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/1/popularize/tt/000000/recordreffer/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/1/popularize/tt/000000/recordreffer/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"phone":"18601696010"}
+        },
+         {
+            'desc':'YTX 用户名查询用户信息',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/1/ytx/000000/query/user/username/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/1/ytx/000000/query/user/username/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"userName":"e7cde63bafe5486bbedf96a94c709ca9","server":"tt"}
+        },
+        {
+            'desc':'YTX 手机号查询用户信息',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/1/ytx/000000/query/user/mobile/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/1/ytx/000000/query/user/mobile/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"mobile":"13482258491","server":"tt"}
+        },
+        {
+            'desc':'YTX 用户名查询用户信息',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/1/ytx/000000/query/account/username/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/1/ytx/000000/query/account/username/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"userName":"e7cde63bafe5486bbedf96a94c709ca9","server":"tt"}
+        },
+        {
+            'desc':'YTX 手机号查询用户开户信息',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/1/ytx/000000/query/account/mobile/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/1/ytx/000000/query/account/mobile/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"mobile":"13482258491","server":"tt"}
+        },
+        {
+            'desc':'YTX 身份证号码解析',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/1/ytx/000000/idcard/query/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/1/ytx/000000/idcard/query/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"id":"11022919040202155X"}
+        },
+         {
+            'desc':'YG 证件号码验证',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/2/yg/000000/openaccount/check/cert/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/2/yg/000000/openaccount/check/cert/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"certNo":"11022919040202155X","certType":"1"}
+        },
+         {
+            'desc':'YG 登录账号验证',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/2/yg/000000/openaccount/check/account/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/2/yg/000000/openaccount/check/account/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"loginAccount":"00399990000001"}
+        },
+        {
+            'desc':'YG 开户',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/2/yg/000000/openaccount/open/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/2/yg/000000/openaccount/open/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"userName":"零零三测试","mobilePhone":"18601696010","certType":"1","certNo":"150403190001012913","email":"843749178@qq.com","ytxUserName":"test"}
+        },
+        {
+            'desc':'YG 验证账号是否可以签约',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/2/yg/000000/openaccount/check/contract/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/2/yg/000000/openaccount/check/contract/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"loginAccount":"00399990000001"}
+        },
+        {
+            'desc':'YG 银行签约',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/2/yg/000000/openaccount/contractbank/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/2/yg/000000/openaccount/contractbank/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"loginAccount":"00399990000001","bankId":"1","bankAcc":"2222222222222222"}
+        },
+        {
+            'desc':'YG 查询开户用户信息',
+            'url_dev':'http://test.open-api.baidao.com/openaccount-server/api/2/yg/000000/openaccount/query/info/json',
+            'url_pro':'http://acc.baidao.com/openaccount-server/api/2/yg/000000/openaccount/query/info/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"loginAccount":"00399990000001","certType":"1","certNo":"150403190001012913"}
+        }
+    ]
+}

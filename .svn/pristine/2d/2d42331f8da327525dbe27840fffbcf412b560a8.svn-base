@@ -1,0 +1,52 @@
+# coding=utf-8
+__author__ = 'zhangfuming'
+
+apis = {
+    'desc':'数据平台api',
+    'list':[
+         {
+            'desc':'获取图片验证码',
+            'url_dev':'http://test.api.baidao.com/api/2/bjwd/verify/apply/imagecode/default/json?imageToken=bjwd123456789',
+            'url_pro':'http://api.baidao.com/dataplatform/api/2/bjwd/verify/apply/imagecode/default/json?imageToken=bjwd123456789',
+            'method':'GET'
+        },
+         {
+            'desc':'发送验证码',
+            'url_dev':'http://test.api.baidao.com/api/2/accweb/verify/apply/bytoken/json?mobile=1860169601&smsToken=bjwd1411107795042',
+            'url_pro':'http://api.baidao.com/dataplatform/api/2/accweb/verify/apply/bytoken/json?mobile=1860169601&smsToken=bjwd1411107795042',
+            'method':'GET'
+        },
+         {
+            'desc':'百家问答提问',
+            'url_dev':'http://test.api.baidao.com/api/1/bjwd/submit/question/json?name=酱油哥&question=银天下系统测试&teacherid=123&mobile=18601696011&smscode=5741&channel=bjwd',
+            'url_pro':'http://api.baidao.com/dataplatform/api/1/bjwd/submit/question/json?name=酱油哥&question=银天下系统测试&teacherid=123&mobile=18601696011&smscode=5741&channel=bjwd',
+            'method':'GET'
+        },
+         {
+            'desc':'获取资讯广告',
+            'url_dev':'http://test.api.baidao.com/api/1/ad/zx/query/json?server=TT&permission=0',
+            'url_pro':'http://api.baidao.com/dataplatform/api/1/ad/zx/query/json?server=TT&permission=0',
+            'method':'GET'
+        },
+         {
+            'desc':'事件通知',
+            'url_dev':'http://test.api.baidao.com/api/1/events/notify/json',
+            'url_pro':'http://api.baidao.com/dataplatform/api/1/events/notify/json',
+            'method':'POST',
+            'header':['Content-Type:application/x-www-form-urlencoded'],
+            'params':{"event":"acc","token":"18601696010"}
+        },
+        {
+            'desc':'获取LSP权限',
+            'url_dev':'http://test.api.baidao.com/api/1/lsp/auth/query/json?username=a5b37c60e9614711874de80bcf7ea327&server=TT',
+            'url_pro':'http://api.baidao.com/dataplatform/api/1/lsp/auth/query/json?username=a5b37c60e9614711874de80bcf7ea327&server=TT',
+            'method':'GET'
+        },
+        {
+            'desc':'获取LSP权限',
+            'url_dev':'http://test.api.baidao.com/api/1/lsp/auth/query/json?username=a5b37c60e9614711874de80bcf7ea327&server=TT',
+            'url_pro':'http://api.baidao.com/dataplatform/api/1/lsp/auth/query/json?username=a5b37c60e9614711874de80bcf7ea327&server=TT',
+            'method':'GET'
+        }
+    ]
+}
